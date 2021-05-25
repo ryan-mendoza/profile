@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('images/gg-bridge.jpg');
+  height: 100vh;
+}
+
+.profile-name h2 {
+  color: #fff;
+}
+
+.profile-location {
+  color: #fff;
+}
+
+/* ------- START IMPORT THE MATERIAL ICONS */
+.material-icons-outlined {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* ------- END IMPORT THE MATERIAL ICONS */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  background-color: #000;
+  /* background-color: #fdfffc; */
+  border-radius: 10px;
+  /* padding: 20px; */
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+
+  animation-name: moveBottom;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
+.profile-image img {
+  width: 100px;
+  height: 100px;
+  top: 160px;
+  border-radius: 50%;
+  padding: 0.3rem;
+  border-radius: 50%;
+  border: 3px;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 100%;
+  background-color: black;
+  /* margin-top: 60px; */
+  align-items: center;
+  justify-content: center;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('images/macbook.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  animation-name: moveTop;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
+.profile-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 20px;
+  background-color: #000;
+  /* background-color: #fdfffc; */
+
+  animation-name: moveBottom;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
+.btn {
+  height: 50px;
+  width: 200px;
+  background-color: #011627;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.btn:hover {
+  height: 50px;
+  width: 200px;
+  background-color: #ff9f1c;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+
+  transition: 0.75s;
+}
+
+.btn:active {
+  transform: translateY(5px);
+}
+
+.profile-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  background-color: #41ead4;
+  border-top: 1px solid darkgrey;
+}
+
+.followers {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  align-items: center;
+  font-weight: 100;
+}
+.likes {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  align-items: center;
+  font-weight: 100;
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  align-items: center;
+  font-weight: 100;
+}
+
+@keyframes moveTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
